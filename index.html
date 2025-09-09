@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invierte con XRPAiBot</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #111;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {color: #00e1ff;}
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {color: #00e1ff;}
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                  url('https://images.unsplash.com/photo-1642200995708-96f2c07a3c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #00e1ff;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00e1ff;
+      display: inline-block;
+    }
+    @keyframes typing {from {width: 0} to {width: 100%}}
+    @keyframes blink {50% {border-color: transparent}}
+
+    .hero p {
+      font-size: 1.3rem;
+      margin: 20px auto 30px;
+      max-width: 700px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+    .btn {
+      display: inline-block;
+      background: #00e1ff;
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .btn:hover {
+      background: #00aacc;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00e1ff;
+    }
+
+    section {padding: 70px 20px; text-align: center;}
+    section h2 {
+      color: #00e1ff;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #00e1ff;
+      margin: 10px auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
+    }
+    .card h3 {margin-bottom: 10px; color: #00e1ff;}
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 20px rgba(0,225,255,0.5);
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .whatsapp:hover {background: #1ebc59;}
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>XRPAiBot</h1>
+    <nav>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#planes">Paquetes</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Invierte en el futuro hoy</h2>
+    <p>Multiplica tu capital con estrategias simples, seguras y diseñadas para ti. Súmate a mi equipo y aprovecha el plan de referidos.</p>
+    <a class="btn" href="https://xrpaibot.com/signup?referer_id=JuanRios" target="_blank">👉 Comienza Ahora</a>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+      <div class="card"><h3>Bajas comisiones</h3><p>Más de tu dinero trabajando para ti.</p></div>
+      <div class="card"><h3>Alta seguridad</h3><p>Tecnología blockchain con transparencia garantizada.</p></div>
+      <div class="card"><h3>Crecimiento real</h3><p>Invierte en proyectos con visión de futuro.</p></div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section id="planes">
+    <h2>Paquetes de Inversión</h2>
+    <div class="grid">
+      <div class="card"><h3>Basic</h3><p>50 - 999 XRP<br>1.00% diario</p></div>
+      <div class="card"><h3>Eco</h3><p>1000 - 4999 XRP<br>1.05% diario</p></div>
+      <div class="card"><h3>Boost</h3><p>5000 - 9999 XRP<br>1.10% diario</p></div>
+      <div class="card"><h3>Turbo</h3><p>10000 - 24999 XRP<br>1.15% diario</p></div>
+      <div class="card"><h3>Hyper</h3><p>25000+ XRP<br>1.20% diario</p></div>
+    </div>
+    <p style="margin-top:30px;font-size:1.1rem;">Imagina multiplicar tu capital sin conocimientos técnicos. ¡No es el futuro, es ahora!</p>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios">
+    <h2>Lo que dicen nuestros usuarios</h2>
+    <div class="grid">
+      <div class="card"><p>“Invertí y ahora tengo ingresos extra cada mes. Sencillo y confiable.”<br><strong>- Carlos G.</strong></p></div>
+      <div class="card"><p>“Nunca pensé que sería tan fácil entrar al mundo de las inversiones.”<br><strong>- Ana M.</strong></p></div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:titechzone15@gmail.com">titechzone15@gmail.com</a></p>
+    <p>Teléfono: 3118709687</p>
+    <a class="whatsapp" href="https://wa.me/573118709687" target="_blank">💬 Escríbeme en WhatsApp</a>
+    <p style="margin-top:25px;font-size:1.1rem;color:#00e1ff;">⏳ Los cupos son limitados. ¡Asegura tu lugar hoy mismo!</p>
+    <a class="btn" href="https://xrpaibot.com/signup?referer_id=JuanRios" target="_blank">🔥 Quiero mi lugar ahora</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 XRPAiBot - Embudo de ventas | Aviso Legal: La inversión en criptomonedas conlleva riesgos. XRPAiBot no garantiza ganancias fijas. Investiga antes de invertir.</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const showCards = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add('show');
+        }
+      });
+    };
+    window.addEventListener('scroll', showCards);
+    showCards();
+  </script>
+
+</body>
+</html>
